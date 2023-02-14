@@ -1,12 +1,12 @@
 (function (window, _) {
-  window.myLibraryName = window.myLibraryName || {
+  window.gamerBlerds = window.gamerBlerds || {
     numz: {},
     phyz: {
 
       /**
       * 
-      * @param {number} pointA a point on a grid/screen
-      * @param {number} pointB another point on a grid/screen
+      * @param {object} pointA a point on a grid/screen
+      * @param {object} pointB another point on a grid/screen
       * 
       * @param {number} pointB.x x value of point b
       * @param {number} pointB.y y value of point b 
