@@ -25,7 +25,7 @@
        * force of impact of a collision.
        * @return {Object} The body.
        */
-      makeBody: function(type, {
+      makeBody: function (type, {
         velocityX = 0,
         velocityY = 0,
         rotationalVelocity = 0,
@@ -60,7 +60,17 @@
           }
         };
       },
-    
+
+      /**
+       * Returns the distance between two points on the screen
+       * 
+       * @param {object} pointA a point on the coordinate plane (screen)
+       * @param {object} pointB a second point on the coordinate plane (screen)
+       * @param {number} distanceX the horizontal distance from the first point to the second point (pointA and pointB)
+       * @param {number} distanceY the vertical distance from the first point to the second point (pointA and pointB)
+       * @param {number} distance the direct (shortest length) distance from pointA to pointB
+       * @returns {distance} the distance in pixels between the two points
+       */
 
       getDistance(pointA, pointB) {
         const
@@ -69,17 +79,6 @@
           distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
         return distance;
       }
-
-      /**
-       * 
-       * Returns an object with basic properties utilized in a 2D physics system. On top of simple physical properties, the body has template methods handleCollision() and update().
-       * 
-       * @param {string} type: A string unique to your system, representing the type of body
-       * @param {object} type: options
-       * @param {number} options.velocityX: The body's velocity on the X-axis
-       * 
-       */
-
     },
   };
 }(window, window._));
