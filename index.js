@@ -1,6 +1,41 @@
 (function (window, _) {
   window.gamerBlerds = window.gamerBlerds || {
+
     numz: {},
+
+    /**
+     * 
+     * @param {Object} pointA a point on the screen
+     * @param {Object} pointB a secondary point on the screen
+     * @param {Number} pointA.x the first point's x value
+     * @param {Number} pointA.y the first point's y value
+     * @param {Number} pointB.x the second point's x value
+     * @param {Number} pointB.y the second point's y value
+     * @param {Number} radians the calculated distance between the two points in radians
+     * @param {Number} distanceX the calculated distance between the two points' X values in pixels
+     * @param {Number} distanceY the calculated distance between the two points' Y values in pixels
+     * @return {Number} degrees: the calculated distance between the two points in degrees
+     * 
+     */
+
+    getAngleDegrees(pointA, pointB) {
+
+      const
+        distanceX = pointB.x - pointA.x,
+        distanceY = pointB.y - pointA.y,
+        radians = Math.atan2(distanceY, distanceX),
+        degrees = radians * 180 / Math.PI;
+      return degrees;
+
+    },
+
+    degreesToRadians(degrees) {
+      return degrees * Math.PI / 180;
+    },
+    radiansToDegrees(radians) {
+      return radians * 180 / Math.PI;
+    },
+
     phyz: {
 
       /**
