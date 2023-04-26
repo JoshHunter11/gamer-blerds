@@ -1,9 +1,9 @@
 (function (window, _) {
   window.gamerBlerds = window.gamerBlerds || {
 
-    numz: {},
+    numz: {
 
-    /**
+          /**
      * 
      * @param {Object} pointA a point on the screen
      * @param {Object} pointB a secondary point on the screen
@@ -35,6 +35,10 @@
     radiansToDegrees(radians) {
       return radians * 180 / Math.PI;
     },
+
+    },
+
+
 
     phyz: {
 
